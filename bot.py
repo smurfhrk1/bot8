@@ -2,7 +2,7 @@ import asyncio
 from playwright.async_api import async_playwright
 import pytesseract
 import random as r
-from data08 import contacts
+from data import contacts
 from PIL import Image
 
 def getHP():
@@ -31,6 +31,7 @@ async def main(nama, email, c):
         print("Mengisi formulir...")
         # await page.fill("#Nama", "user_anda")
         # await page.fill("#Email", "email_anda")
+        await page.wait_for_timeout(2000)
         await page.fill("#profile_name", nama)
         await page.fill("#profile_email", email)
         await page.fill("#profile_company_name", "Kementerian Imigrasi dan Pemasyarakatan")
@@ -90,12 +91,13 @@ async def main(nama, email, c):
         #Whatsapp
         await page.mouse.click(370, 770)
         await page.wait_for_timeout(2000)
-        namaGambar = f"{c:03d}.png"
-        await page.screenshot(path=namaGambar)
+        #namaGambar = f"{c:03d}.png"
+        #await page.screenshot(path=namaGambar)
 
         #Live chat
         await page.mouse.click(360, 669)
         await page.wait_for_timeout(2000)
+        print(f"Live Chat Akun : ({c}) {nama}")
         #await page.screenshot(path="11.png")
         #await page.screenshot(path="12.png")
 
