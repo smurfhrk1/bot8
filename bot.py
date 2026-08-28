@@ -2,7 +2,7 @@ import asyncio
 from playwright.async_api import async_playwright
 import pytesseract
 import random as r
-from data import contacts
+from data08 import contacts
 from PIL import Image
 
 def getHP():
