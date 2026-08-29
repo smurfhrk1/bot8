@@ -4,9 +4,8 @@ on:
   # Memungkinkan bot dijalankan manual dari tombol di GitHub
   workflow_dispatch:
   
-  # Jalankan otomatis sesuai jadwal (contoh: Setiap jam 08:00 WIB / 01:00 UTC)
-  schedule:
-    - cron: '0 1 * * *'
+  #schedule:
+  #  - cron: '0 1 * * *'
 
 jobs:
   run-bot:
