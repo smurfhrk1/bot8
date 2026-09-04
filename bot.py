@@ -2,7 +2,7 @@ import asyncio
 from playwright.async_api import async_playwright
 import pytesseract
 import random as r
-from data11 import contacts
+from data08 import contacts
 from PIL import Image
 
 def getHP():
@@ -66,14 +66,13 @@ async def main(nama, email, c):
         await page.wait_for_timeout(1000)
         #await page.screenshot(path=f"{c}_5filter.png")
         await page.keyboard.type("UKPBJ KEMENTERIAN IM")
-        await page.wait_for_timeout(1000)
+        await page.wait_for_timeout(3000)
         #await page.screenshot(path=f"{c}_6booth.png")
         await page.keyboard.press("Enter")
-        await page.wait_for_timeout(2000)
+        await page.wait_for_timeout(1000)
         await page.keyboard.press("Enter")
         await page.wait_for_timeout(2000)
-        await page.keyboard.press("Enter")
-        await page.wait_for_timeout(2000)
+        #540, 662
         await page.mouse.click(540, 662)
         await page.wait_for_timeout(2000)
         await page.mouse.click(540, 662)
