@@ -90,8 +90,8 @@ async def main(nama, email, c):
         await browser.close()
 
 if __name__ == "__main__":
-    jumlah = 100
-    mulaiDari = 0
+    jumlah = 500
+    mulaiDari = 100
     print("Mulai...")
     for i in range (mulaiDari, mulaiDari+jumlah):
         contact = contacts[i]
