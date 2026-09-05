@@ -65,32 +65,33 @@ async def main(nama, email, c):
         await page.mouse.click(420, 30)
         await page.wait_for_timeout(1000)
         #await page.screenshot(path=f"{c}_5filter.png")
-        await page.keyboard.type("imi")
+        await page.keyboard.type("imigra")
         await page.wait_for_timeout(1000)
         #await page.screenshot(path=f"{c}_6booth.png")
         await page.keyboard.press("Enter")
         await page.wait_for_timeout(1000)
         await page.mouse.click(420, 30)
-        await page.keyboard.type("imi")
+        await page.keyboard.type("imigra")
+        await page.wait_for_timeout(1000)
         await page.keyboard.press("Enter")
         # Sudah masuk boot
 
-        await page.wait_for_timeout(3000)
-        await page.mouse.click(470, 830) #info
+        await page.wait_for_timeout(2000)
+        #await page.mouse.click(470, 830) #info
         #await page.mouse.click(357, 624) #video
-        #await page.mouse.click(170, 662) #poster kiri
+        await page.mouse.click(170, 662) #poster kiri
         #await page.mouse.click(540, 662) #poster kanan
-
-        if(c==0):
-            await page.wait_for_timeout(2000)
-            await page.screenshot(path=f"{c}_9last.png")
+        await page.wait_for_timeout(2000)
+        if(c==0 or True):            
+            #await page.screenshot(path=f"{c}_9last.png")
 
         print(f"Akun : ({c}) {nama} | Selesai")
+        await page.wait_for_timeout(2000)
         await browser.close()
 
 if __name__ == "__main__":
-    jumlah = 500
-    mulaiDari = 500
+    jumlah = 100
+    mulaiDari = 0
     print("Mulai...")
     for i in range (mulaiDari, mulaiDari+jumlah):
         contact = contacts[i]
