@@ -63,18 +63,19 @@ async def main(nama, email, c):
         #await page.screenshot(path=f"{c}_4hall.png")
         # 7. Filter booth
         await page.mouse.click(420, 30)
-        await page.wait_for_timeout(500)
+        await page.wait_for_timeout(1000)
         #await page.screenshot(path=f"{c}_5filter.png")
         await page.keyboard.type("imi")
-        await page.wait_for_timeout(500)
+        await page.wait_for_timeout(1000)
         #await page.screenshot(path=f"{c}_6booth.png")
         await page.keyboard.press("Enter")
-        await page.wait_for_timeout(500)
+        await page.wait_for_timeout(1000)
         await page.mouse.click(420, 30)
+        await page.keyboard.type("imi")
         await page.keyboard.press("Enter")
         # Sudah masuk boot
 
-        await page.wait_for_timeout(2000)
+        await page.wait_for_timeout(3000)
         await page.mouse.click(470, 830) #info
         #await page.mouse.click(357, 624) #video
         #await page.mouse.click(170, 662) #poster kiri
@@ -89,7 +90,7 @@ async def main(nama, email, c):
 
 if __name__ == "__main__":
     jumlah = 500
-    mulaiDari = 0
+    mulaiDari = 500
     print("Mulai...")
     for i in range (mulaiDari, mulaiDari+jumlah):
         contact = contacts[i]
